@@ -1,0 +1,23 @@
+<md-card>
+  <md-card-header>
+    <md-card-title>Holiday Details [<span color="accent">{{holidayName}}</span>]</md-card-title>
+  </md-card-header>
+
+  <md-card-content>
+    <form class="form" *ngIf="holiday.name">
+    <md-input-container class="full-width">
+      <input mdInput placeholder="Holiday name" [value]="holiday?.name" readonly>
+    </md-input-container>
+    <md-input-container class="full-width">
+      <input mdInput placeholder="Date" [value]="holiday?.date" readonly>
+    </md-input-container>
+    <md-input-container class="full-width">
+      <input mdInput placeholder="Observed" [value]="holiday?.observed" readonly>
+    </md-input-container>
+    <md-input-container class="full-width">
+      <input mdInput placeholder="Public" [value]="holiday?.public === true ? 'Yes' : 'No' " readonly>
+    </md-input-container>
+    <button md-raised-button color="primary" [routerLink]="['/']" type="button">Back</button>
+    </form>
+  </md-card-content>
+</md-card>
